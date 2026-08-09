@@ -1,1 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0a0a0f;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(10, 10, 15, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #facc15;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.88)
+        ),
+        url("assets/image.png") center/cover no-repeat fixed;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 10vw, 100px);
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero .description {
+    max-width: 600px;
+    margin: 0 auto 30px;
+
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+
+    color: #d1d5db;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.start-btn,
+.game-card button {
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    background: #facc15;
+    color: #111827;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.start-btn:hover,
+.game-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(250, 204, 21, 0.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    min-height: 80vh;
+
+    padding: 110px 7%;
+
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   GAME CARDS
+========================= */
+
+.game-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.game-card {
+    padding: 35px 25px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(250, 204, 21, 0.5);
+}
+
+.game-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.game-card p {
+    color: #bfc3cc;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+.leaderboard-box {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.leaderboard-box p {
+    color: #c7cbd3;
+
+    margin: 10px 0;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-box {
+    max-width: 400px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.profile-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.profile-box h3 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.profile-box p {
+    margin: 8px 0;
+
+    color: #c7cbd3;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    color: #888;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
