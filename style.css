@@ -463,3 +463,450 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================
+   STRAND BATTLE
+========================================== */
+
+.battle-page {
+    min-height: 100vh;
+
+    padding: 120px 20px 60px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.94)
+        ),
+        url("image.png") center center / cover no-repeat fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================================
+   BATTLE HEADER
+========================================== */
+
+.battle-header {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.battle-label {
+    color: #facc15;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.battle-header h1 {
+    font-size: clamp(32px, 6vw, 55px);
+
+    font-weight: 900;
+
+    margin-bottom: 12px;
+}
+
+#playerInfo {
+    color: #c7cbd3;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   BATTLE CARD
+========================================== */
+
+.battle-card {
+    width: 100%;
+    max-width: 850px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==========================================
+   BATTLE TOP
+========================================== */
+
+.battle-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    color: #c7cbd3;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+#scoreDisplay {
+    color: #facc15;
+}
+
+
+/* ==========================================
+   QUESTION
+========================================== */
+
+.question-area {
+    padding: 20px 5px 35px;
+
+    text-align: center;
+}
+
+#questionText {
+    font-size: clamp(22px, 4vw, 32px);
+
+    line-height: 1.45;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   ANSWERS
+========================================== */
+
+.answer-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.answer-btn {
+    width: 100%;
+
+    min-height: 65px;
+
+    padding: 16px 20px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.answer-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+
+    border-color: #facc15;
+
+    background:
+        rgba(250, 204, 21, 0.1);
+}
+
+.answer-btn:disabled {
+    cursor: default;
+}
+
+
+/* ==========================================
+   CORRECT ANSWER
+========================================== */
+
+.answer-btn.correct {
+    border-color: #22c55e;
+
+    background:
+        rgba(34, 197, 94, 0.18);
+
+    color: #86efac;
+}
+
+
+/* ==========================================
+   WRONG ANSWER
+========================================== */
+
+.answer-btn.wrong {
+    border-color: #ef4444;
+
+    background:
+        rgba(239, 68, 68, 0.18);
+
+    color: #fca5a5;
+}
+
+
+/* ==========================================
+   NEXT BUTTON
+========================================== */
+
+.next-btn {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #facc15;
+
+    color: #111111;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(250, 204, 21, 0.25);
+}
+
+
+/* ==========================================
+   RESULT SCREEN
+========================================== */
+
+.result-screen {
+    width: 100%;
+
+    min-height: 500px;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.result-card {
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(14px);
+}
+
+.result-icon {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+.result-card h2 {
+    font-size: 35px;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.result-card > p {
+    color: #c7cbd3;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   RESULT STATS
+========================================== */
+
+.result-stats {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    margin-bottom: 30px;
+}
+
+.result-stats p {
+    color: #c7cbd3;
+}
+
+.result-stats strong {
+    display: block;
+
+    color: #facc15;
+
+    font-size: 24px;
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   RESULT BUTTONS
+========================================== */
+
+.battle-btn,
+.secondary-btn {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.battle-btn {
+    border: none;
+
+    background: #facc15;
+
+    color: #111111;
+
+    margin-bottom: 12px;
+}
+
+.battle-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(250, 204, 21, 0.25);
+}
+
+.secondary-btn {
+    border: 1px solid
+        rgba(255, 255, 255, 0.15);
+
+    background: transparent;
+
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    border-color: #facc15;
+
+    color: #facc15;
+}
+
+
+/* ==========================================
+   MOBILE BATTLE DESIGN
+========================================== */
+
+@media (max-width: 700px) {
+
+    .battle-page {
+        padding: 130px 15px 40px;
+    }
+
+    .battle-card {
+        padding: 22px 17px;
+
+        border-radius: 17px;
+    }
+
+    .battle-top {
+        font-size: 12px;
+    }
+
+    .answer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .answer-btn {
+        min-height: 58px;
+
+        font-size: 14px;
+    }
+
+    .result-stats {
+        gap: 20px;
+    }
+
+    .result-card {
+        padding: 35px 22px;
+    }
+
+}
